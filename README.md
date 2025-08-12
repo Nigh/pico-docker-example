@@ -15,7 +15,7 @@ The commands below shows how to compile the `pico-examples` with the docker.
 ```bash
 git clone --depth=1 https://github.com/raspberrypi/pico-examples
 cd pico-examples
-docker run --rm -v ${PWD}:/pico-src xianii/pico-sdk:latest /bin/bash -c "cd pico-src && cmake . -G Ninja -Bbuild -S. && ninja -C build"
+docker run --rm -v ${PWD}:/workspace xianii/pico-sdk:latest /bin/bash -c "cd pico-src && cmake . -G Ninja -Bbuild -S. && ninja -C build"
 ```
 
 ## Compile this blink example
@@ -23,7 +23,7 @@ docker run --rm -v ${PWD}:/pico-src xianii/pico-sdk:latest /bin/bash -c "cd pico
 Run the command below at the same folder with this README.
 
 ```bash
-docker run --rm -v ${PWD}:/pico-src xianii/pico-sdk:latest /bin/bash -c "cd pico-src && cmake . -G Ninja -Bbuild -S. && ninja -C build"
+docker run --rm -v ${PWD}:/workspace xianii/pico-sdk:latest /bin/bash -c "cd pico-src && cmake . -G Ninja -Bbuild -S. && ninja -C build"
 ```
 
 The `uf2` firmware will then appear in the path `. /build/blink_simple/blink_simple.uf2`
